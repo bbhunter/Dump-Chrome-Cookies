@@ -13,5 +13,5 @@ Repo to show how it is possible to modify a Chrome browser extension (in this ca
 2. The on-disk Chrome binary is executed to browse to the static CookieBro chrome url (**chrome-extension://lpmockibcakojclnfmhchibmdpmollgn/editor.html?store=0**). Hitting this chrome-extension url force downloads the Chrome cookies JSON file (due to the modifications of the CookieBro script). 
 3. You can then access these cookies from the ~/Downloads folder (filename: "cookies.json").
 
-**Note: I also included a simple C# project here in the folder "ChromeDump" that is a Windows implementation of this same technique.**
+**Note: I also included a simple C# file (Dump-Chrome-Cookies.cs)" that is a Windows implementation of this same technique.**
 
