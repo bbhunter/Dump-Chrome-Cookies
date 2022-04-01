@@ -2,11 +2,11 @@
 Repo to shows how it is possible to modify a Chrome browser extension (in this case CookieBro) and leverage it to dump Chrome cookies on a remote host. 
 
 ## Steps
-1. Upload com.google.chrome-init.zip to a target machine (this is the modified CookieBro extension that force downloads Chrome cookies when the Cookie Editor is invoked)
-2. Unzip com.google.chrome-init.zip to the /tmp dir
-3. Use **check-screenlock.js** to check whether the screen is locked (in Mythic C2 by importing it with `jsimport` and then running `jsimport_call Check()`)
+1. Upload com.google.chrome-init.zip to a target macOS machine (this is the modified CookieBro extension that force downloads Chrome cookies when the Cookie Editor is invoked)
+2. Unzip com.google.chrome-init.zip to the /tmp dir on the target macOS host
+3. Use **check-screenlock.js** to check whether the macOS screen is locked on the target host (in Mythic C2 by importing it with `jsimport` and then running `jsimport_call Check()`)
 4. Run **Dump-Chrome-Cookies.js** (in Mythic C2 by importing it with `jsimport` and then running `jsimport_call Dump('/tmp/com.google-chrome-init')`) 
-5. Retrieve cookies.json from the ~/Downloads directory
+5. Retrieve cookies.json from the ~/Downloads directory on the target macOS host
 
 ## How This Works
 1. The modified CookieBro extension (com.google.chrome-init.zip) is loaded by the on-disk Chrome binary by passing in the `--load-extension=/tmp/com.google-chrome-init` flag. 
