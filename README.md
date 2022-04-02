@@ -1,5 +1,5 @@
 # Dump-Chrome-Cookies
-Repo to show how it is possible to modify a Chrome browser extension (in this case CookieBro) and leverage it to dump Chrome cookies on a remote host. 
+Repo to demonstrate how it is possible to modify a Chrome browser extension (in this case CookieBro) and leverage it to dump Chrome cookies on a remote host. 
 
 ## Steps
 1. Upload `com.google.chrome-init.zip` to a target macOS machine (this is the modified CookieBro extension that force downloads Chrome cookies when the Cookie Editor is invoked)
