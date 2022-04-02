@@ -9,7 +9,7 @@ Repo to demonstrate how it is possible to modify a Chrome browser extension (in 
 5. Retrieve cookies.json from the ~/Downloads directory on the target macOS host
 
 ## How This Works
-1. The modified CookieBro extension (`com.google.chrome-init.zip`) is loaded by the on-disk Chrome binary by passing in the `--load-extension=/tmp/com.google-chrome-init` flag. 
+1. The modified CookieBro extension (extracted from the .zip as `com.google-chrome-init`) is loaded by the on-disk Chrome binary by passing in the `--load-extension=/tmp/com.google-chrome-init` flag. 
 2. The on-disk Chrome binary is executed to browse to the static CookieBro chrome url (`chrome-extension://lpmockibcakojclnfmhchibmdpmollgn/editor.html?store=0`). Hitting this chrome-extension url force downloads the Chrome cookies JSON file (due to the modifications of the CookieBro script). 
 3. You can then access these cookies from the ~/Downloads folder (filename: `cookies.json`).
 
